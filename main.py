@@ -625,12 +625,17 @@ class VibrationDataRemover:
         # Remove the range from DataFrame
         self.data = self.data[~mask].copy()
         
-        # Adjust all subsequent timestamps to maintain even spacing
+        # STEP 1: Close the gap by shifting data after removal
         time_values = self.data[self.time_col].values
         after_removal = time_values > actual_end
         time_values[after_removal] -= time_gap
-        self.data[self.time_col] = time_values
         
+        # STEP 2: Renormalize all times to start from 0.0
+        min_time = time_values.min()
+        time_values = time_values - min_time
+    
+        self.data[self.time_col] = time_values
+    
         # Reset index
         self.data.reset_index(drop=True, inplace=True)
         
@@ -638,7 +643,8 @@ class VibrationDataRemover:
         self._convert_to_numpy()
         
         print(f"Removed {np.sum(mask)} points")
-        print(f"Time gap closed: {time_gap:.6f} (based on actual data points)")
+        print(f"Time gap closed: {time_gap:.6f}")
+        print(f"Times renormalized: started at {min_time:.6f} → now at 0.0")
         
         # Recalculate sampling rate and invalidate FFT cache
         self.calculate_sampling_rate()
